@@ -24,9 +24,9 @@ class _RegisterViewState extends State<RegisterView> {
           ),
         ),
         const TextField(
+          obscureText: true,
           autocorrect: false,
           enableSuggestions: false,
-          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
               hintText: "Enter password here",
               border: OutlineInputBorder(
