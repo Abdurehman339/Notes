@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/login_view.dart';
 import 'package:flutter_application_1/view/register_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: const Text("My Home Page"),
       ),
-      body: RegisterView(),
+      body: LoginView(),
     );
   }
 }
