@@ -36,7 +36,26 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: const Text("My Home Page"),
       ),
-      body: LoginView(),
+      body: ErrorView(),
+    );
+  }
+}
+
+class ErrorView extends StatelessWidget {
+  const ErrorView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text("Veirfy Your Email Now"),
+        TextButton(
+          onPressed: () {
+            print("Verification Button Pressed");
+          },
+          child: const Text("Send Verification Email"),
+        ),
+      ],
     );
   }
 }
